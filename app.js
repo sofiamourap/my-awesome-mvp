@@ -6,6 +6,7 @@ const cors = require("cors");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+let messagesRouter = require("./routes/messages");
 
 var app = express();
 
@@ -18,5 +19,6 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/api/messages", messagesRouter);
 
 module.exports = app;
